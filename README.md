@@ -5,6 +5,7 @@ Kaola 是一组面向短视频分析、复刻、电商带货分镜和产品卖�
 ## 包含内容
 
 - `kaola`：根据当前视频任务路由到合适的子 Skill。
+- `kaola-setup`：引导注册并配置 MiniMax、阿里云 OSS 和 GPT Image Two 所需凭据。
 - `kaola-lapian`：对用户有权分析的视频进行抽帧、转写和结构化拉片。
 - `kaola-daihuo`：把商品素材和已确认卖点整理为电商短视频分镜与提示词。
 - `kaola-fuke`：保留原视频结构，仅替换指定人物、服装、商品或 Logo。
