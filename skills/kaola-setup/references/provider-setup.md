@@ -4,9 +4,9 @@
 
 把 [MiniMax 开放平台](https://platform.minimaxi.com/) 发给用户，说明注册或登录后，进入“接口密钥”创建 API Key 即可。
 
-## GPT Image Two
+## GPT Image Two（可选建议）
 
-把 [Grsai API 后台](https://grsai.com/zh/dashboard) 发给用户，说明注册或登录后创建 API Key 即可。
+只在用户需要生成新的人脸参考图时，建议使用 GPT Image Two。把 [Grsai API 后台](https://grsai.com/zh/dashboard) 发给用户，说明注册或登录后创建 API Key 即可。用户不配置时，直接使用系统内置图片生成能力。
 
 ## 阿里云 OSS 半自动配置
 
