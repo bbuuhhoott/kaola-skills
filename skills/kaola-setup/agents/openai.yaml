@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kaola · 首次配置"
+  short_description: "引导注册 MiniMax、阿里云 OSS 和 GPT Image Two"
+  default_prompt: "使用 $kaola-setup 带我完成 Kaola 所需服务的账号注册、凭据创建与本地配置。"
