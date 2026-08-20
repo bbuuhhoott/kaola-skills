@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kaola AI 视频入口"
+  short_description: "识别视频任务并调用最合适的 Kaola Skill"
+  default_prompt: "使用 $kaola 根据当前对话判断我该用哪个 Kaola 视频 Skill，并直接继续处理。"
