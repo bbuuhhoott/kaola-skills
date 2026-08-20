@@ -2,10 +2,18 @@
 
 Kaola 是一组面向短视频分析、复刻、电商带货分镜和产品卖点可视化的 Codex Skills。
 
+## 使用前必须准备
+
+1. **阿里云 OSS（必须）**：注册阿里云账号并开通 OSS，用于存储和提供图片、视频素材链接。还需要准备 Bucket、RAM 用户和 AccessKey。
+2. **MiniMax H3（必须）**：注册 MiniMax 开放平台账号并创建 API Key，用于执行视频生成。
+3. **GPT Image Two（建议，非必须）**：只在需要生成新的人脸参考图时优先使用。可在 Grsai 注册并创建 API Key；没有配置时，Kaola 会直接使用系统内置的图片生成能力，不会阻塞任务。
+
+不知道如何配置时，安装后直接使用 `$kaola-setup`。MiniMax 和 Grsai 会给出注册入口；阿里云账号登录后，会引导创建私有 Bucket、RAM 专用用户和最小权限。不要把 API Key 或 AccessKey 提交到 GitHub。
+
 ## 包含内容
 
 - `kaola`：根据当前视频任务路由到合适的子 Skill。
-- `kaola-setup`：引导注册并配置 MiniMax、阿里云 OSS 和 GPT Image Two 所需凭据。
+- `kaola-setup`：引导配置 MiniMax、阿里云 OSS，以及可选的 GPT Image Two。
 - `kaola-lapian`：对用户有权分析的视频进行抽帧、转写和结构化拉片。
 - `kaola-daihuo`：把商品素材和已确认卖点整理为电商短视频分镜与提示词。
 - `kaola-fuke`：保留原视频结构，仅替换指定人物、服装、商品或 Logo。
