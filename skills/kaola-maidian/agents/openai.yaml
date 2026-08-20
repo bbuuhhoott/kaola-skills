@@ -1,4 +1,4 @@
 interface:
   display_name: "Kaola · 卖点视频"
-  short_description: "用 GPT Image 2 VIP 4K 与 MiniMax H3 768P 制作卖点视频"
-  default_prompt: "Use $kaola-maidian 使用 gpt-image-2-vip 4K 和 MiniMax-H3 768P 设计并生成产品卖点视频。"
+  short_description: "把产品功能转化为可见、可信的商业视频演示"
+  default_prompt: "使用 $kaola-maidian 把产品功能和用户利益转化为卖点视频方案、分镜与逐镜提示词。"
