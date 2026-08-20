@@ -1,0 +1,31 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+credentials*
+
+# Generated media and analysis output
+outputs/
+skill-tests/
+frames/
+*.mp4
+*.mov
+*.wav
+*.jpg
+*.jpeg
+*.png
+
+# Local Python environments and model caches
+.runtime/
+.venv/
+venv/
+.cache/
