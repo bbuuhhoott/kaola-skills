@@ -11,6 +11,8 @@ description: 引导用户注册并配置 Kaola 所需的 MiniMax、阿里云 OSS
 
 - MiniMax 和 GPT Image Two 只给注册或后台网址，告诉用户登录后创建 API Key，不展开长篇教程。
 - GPT Image Two 统一引导到 Grsai 后台，对应 `gpt-image-2-vip` 兼容能力。
-- 阿里云 OSS 需要引导用户完成账号、OSS 开通、Bucket、RAM 用户、AccessKey 和最小权限配置。
+- 阿里云 OSS 采用半自动流程：用户只负责注册、登录、实名认证和必要的付费确认；登录完成后，使用当前可用的浏览器操作能力创建私有 Bucket、RAM 专用用户和最小权限策略。
+- 默认 Bucket 使用华东 1（杭州）、标准存储、私有读写，名称使用 `kaola-video-assets-唯一后缀`；RAM 用户使用 `kaola-oss-uploader`。用户已指定名称或地域时优先服从用户。
+- 在最终点击创建 AccessKey 前必须即时说明“即将为 kaola-oss-uploader 创建长期访问凭据”并取得用户确认。未确认时停在最后一步，不创建凭据。
 - 不要让用户把密钥粘贴到对话或 GitHub；只让用户在自己的本地环境中保存。
 - 不代替用户充值、购买、实名认证或授予高权限。
