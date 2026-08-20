@@ -2,7 +2,3 @@ interface:
   display_name: "Kaola · 视频复刻"
   short_description: "保留原视频结构，仅替换指定人物、商品或画面元素"
   default_prompt: "使用 $kaola-fuke 分析原视频结构，并生成只替换指定元素的逐段复刻执行包。"
-interface:
-  display_name: "Kaola · 视频复刻"
-  short_description: "用 GPT Image 2 VIP 4K 与 MiniMax H3 768P 完成视频复刻"
-  default_prompt: "Use $kaola-fuke 使用 gpt-image-2-vip 4K 和 MiniMax-H3 768P 生成只替换指定元素的逐段复刻执行包。"
