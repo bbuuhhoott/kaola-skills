@@ -1,6 +1,6 @@
 ---
 name: kaola
-description: Kaola AI 视频 Skills 总入口，负责读取当前对话、识别任务所处阶段，并在 kaola-lapian、kaola-daihuo、kaola-fuke、kaola-maidian 中只选择当前最合适的一个继续执行。用户不知道该用哪个 Kaola Skill、说“帮我做 AI 视频”但任务类型不清、输入 /kaola 或 $kaola、第一次使用需要引导，或某个 Kaola 子 Skill 完成后询问下一步时使用。用户已明确点名某个子 Skill 时服从其选择，不重新路由。
+description: Kaola AI 视频 Skills 总入口，负责读取当前对话、识别任务所处阶段，并在 kaola-setup、kaola-lapian、kaola-daihuo、kaola-fuke、kaola-maidian 中只选择当前最合适的一个继续执行。用户不知道该用哪个 Kaola Skill、说“帮我做 AI 视频”但任务类型不清、输入 /kaola 或 $kaola、第一次使用需要引导或 API 配置，或某个 Kaola 子 Skill 完成后询问下一步时使用。用户已明确点名某个子 Skill 时服从其选择，不重新路由。
 ---
 
 # Kaola：AI 视频工具箱入口
@@ -19,7 +19,7 @@ description: Kaola AI 视频 Skills 总入口，负责读取当前对话、识�
 
 按以下优先级判断：
 
-1. 用户明确点名 `kaola-lapian`、`kaola-daihuo`、`kaola-fuke` 或 `kaola-maidian`：直接读取并执行该 Skill，不重新分类。
+1. 用户明确点名 `kaola-setup`、`kaola-lapian`、`kaola-daihuo`、`kaola-fuke` 或 `kaola-maidian`：直接读取并执行该 Skill，不重新分类。
 2. 用户输入“新手入门”“第一次使用 Kaola”“教我怎么用”：进入模式 C。
 3. 用户提出新的明确任务：进入模式 A，按新任务路由；不要因为对话中存在旧结果而误入任务后导航。
 4. 用户询问“下一步做什么”“接下来呢”“继续怎么做”，且对话中已有 Kaola 子 Skill 的结果：进入模式 B。
@@ -52,6 +52,7 @@ description: Kaola AI 视频 Skills 总入口，负责读取当前对话、识�
 
 | 用户当前意图 | 当前选择 | 判断依据 |
 |---|---|---|
+| 询问如何注册 MiniMax、阿里云 OSS 或 GPT Image Two，创建 API Key / AccessKey / Bucket，或因缺少凭据无法生成 | `kaola-setup` | 当前第一步是完成账号与凭据配置 |
 | 给出抖音、TikTok 等链接或本地视频，要求下载、逐秒截图、六列分镜、语音转写、提取标题 Tag，或整理为“时间、画面、脚本” | `kaola-lapian` | 当前第一步是忠实拆解原视频 |
 | 要把商品图、卖点或已有“时间、画面、脚本”做成销售转化视频，补充镜头、音乐音效、电商提示词，或参考图直接出带货视频 | `kaola-daihuo` | 目标是销售转化和购买行动 |
 | 有原视频底片，要求动作、构图、场景、运镜、节奏和时长保持不变，只替换人物、服装、商品、道具、包装或 Logo | `kaola-fuke` | 原视频结构是必须锁定的模板 |
@@ -75,6 +76,7 @@ description: Kaola AI 视频 Skills 总入口，负责读取当前对话、识�
 随后完整读取对应文件并在同一轮继续执行，不让用户退出当前对话后重新调用：
 
 - `kaola-lapian`：读取 `../kaola-lapian/SKILL.md`
+- `kaola-setup`：读取 `../kaola-setup/SKILL.md`
 - `kaola-daihuo`：读取 `../kaola-daihuo/SKILL.md`
 - `kaola-fuke`：读取 `../kaola-fuke/SKILL.md`
 - `kaola-maidian`：读取 `../kaola-maidian/SKILL.md`
@@ -119,6 +121,6 @@ description: Kaola AI 视频 Skills 总入口，负责读取当前对话、识�
 
 ## 边界
 
-- 需求不属于拉片、带货、复刻或卖点可视化时，明确说明当前 Kaola 工具箱尚未覆盖，不虚构不存在的子 Skill。
+- 需求不属于账号配置、拉片、带货、复刻或卖点可视化时，明确说明当前 Kaola 工具箱尚未覆盖，不虚构不存在的子 Skill。
 - 涉及下载、人物替换、品牌素材或商业使用时，遵守所选子 Skill 的权利与安全规则。
 - 用户用中文就用中文回复；用户用其他语言时跟随用户语言。
