@@ -2,6 +2,10 @@
 
 Kaola 是一组面向短视频分析、复刻、电商带货分镜和产品卖点可视化的 Codex Skills。
 
+## 总览
+
+![Kaola Skills 总览](docs/kaola-skills-overview.gif)
+
 ## 包含内容
 
 - `kaola`：根据当前视频任务路由到合适的子 Skill。
