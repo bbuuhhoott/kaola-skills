@@ -23,6 +23,9 @@ frames/
 *.jpg
 *.jpeg
 *.png
+!docs/*.jpg
+!docs/*.jpeg
+!docs/*.png
 
 # Local Python environments and model caches
 .runtime/
